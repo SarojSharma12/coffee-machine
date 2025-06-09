@@ -1,4 +1,4 @@
-from utils import get_resources_report,is resources sufficient
+from utils import get_resources_report, is_resources_sufficient
 
 
 is_machine_on = True
@@ -14,5 +14,5 @@ while is_machine_on:
         if choice not in ["latte","espresso","cappuccino"]:
             print(f"sorry!!!{choice} is not available. select correctly")
         else:
-            print(is_resource_sufficient(choice))
+            print(is_resources_sufficient(choice))
             #print(choice)
