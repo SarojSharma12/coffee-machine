@@ -12,7 +12,9 @@ def is_resources_sufficient(choice):
         if resources.get(ingred, 0) < qty:
             print(f"we dont have enough{ingred}!!! Try another coffee.")
             is_resources_sufficient = False
-        return is_resources_suff
+            break
+
+    return is_resources_suff
     
 def process_coins(choice):
     print(" Please insert coins.")
@@ -26,7 +28,7 @@ def process_coins(choice):
     
 
     if total>cost: 
-        print(f"Here is ${round(total - cost, 2)}.45 dollars in change.")
+        print(f"Here is ${round(total - cost, 2)} in change 💰.")
         print(f"here is your {choice}🍵 .Enjoy!")
 
     if "money" in resources and isinstance(resources.get("money"," "),(float,int)):
@@ -34,7 +36,7 @@ def process_coins(choice):
     else:
          print("KEYERROR !!! 'money' is not found as key in resources.")
     for ingred, qty in COFFEE_MENU.get(choice,{}).get("ingredients",{}).items():
-                resources[ingred] -= qty
+        resources[ingred] -= qty
     else:
         print("Sorry that's not enough money. Money refunded.")
      
