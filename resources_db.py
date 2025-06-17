@@ -1,7 +1,7 @@
 machine_resources = {
     "water":500,
-    "milk":400,
-    "coffee":300,
+    "milk":300,
+    "coffee":100,
     "money":0,
 }
 
